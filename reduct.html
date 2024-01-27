@@ -79,7 +79,7 @@
     <label for="yearlyIncome">Please input your yearly income:</label>
     <input type="number" id="yearlyIncome" name="yearlyIncome" required><br><br>  
 
-    <label for="wife">Do you have a lawful wife?</label>
+    <label for="wife">Do you maried?</label>
     <select id="wife" name="wife">
         <option value="1">Yes</option>
         <option value="0">No</option>
@@ -149,6 +149,7 @@
 
 <script>
     function calculateDeductions() {
+        event.preventDefault();
         const all_income = parseInt(document.getElementById('yearlyIncome').value);
         // Get values from input fields
         const wife = document.querySelector('select[name="wife"]').value;
@@ -189,7 +190,7 @@
     }
 
 </script>
-<!-- kuay -->
+<!-- kuay tong-->
 <footer class="text-center fixed-bottom bg-light p-2">
         <p>&copy; 2023 Thai Income Tax Calculator<br>Make with powered of 🍺,☕ and 🧠</p>
 </footer>
